@@ -1,0 +1,33 @@
+@use "../../foundation/common" as c;
+
+.pnavi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+    & .page-numbers{
+        display: block;
+        padding: 5px 15px;
+        margin: 0 5px;
+        border: solid 1px #707070;
+        text-align: center;
+        align-items: center;
+        text-decoration: none;
+        color: #707070;
+        border-radius: 5px;
+        font-family: c.$font-roboto ;
+        white-space: nowrap;
+        &.current{
+            color: #FFF;
+            background-color: black;
+        }
+        &.prev{
+            border: none;
+        }
+        &.next{
+            border: none;
+        }
+        
+    }
+}

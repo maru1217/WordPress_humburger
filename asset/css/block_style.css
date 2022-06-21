@@ -1,0 +1,38 @@
+/*****************************************************************************
+SET
+*****************************************************************************/
+/* light */
+/* Heavy */
+/* medium */
+/* Bold */
+/* Color palette */
+.wp-container-2 {
+  display: grid !important;
+  width: 100%;
+  margin-top: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  gap: 20px;
+}
+.wp-container-2 figure {
+  width: 100% !important;
+}
+@media screen and (min-width: 767px) {
+  .wp-container-2 {
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+    column-gap: 2%;
+    row-gap: 20px;
+  }
+}
+@media screen and (min-width: 1078px) {
+  .wp-container-2 {
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    column-gap: 1.5%;
+    row-gap: 20px;
+  }
+}
+
+h2 {
+  font-size: 200px;
+}
+
+/*# sourceMappingURL=block_style.css.map */

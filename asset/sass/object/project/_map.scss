@@ -1,0 +1,92 @@
+@use "../../foundation/common" as c;
+$map-size-sp :  691px;
+$map-size-tb : 415px ;
+$map-size-pc : 649px ;
+
+.p-map{
+    background-color: #000000;
+    width: 100%;
+    position: relative;
+    z-index: 80;
+    min-height: $map-size-sp;
+    @include c.responsive(screen02){
+        min-height: $map-size-tb;
+    }
+    @include c.responsive(screen03){
+        min-height: $map-size-pc;
+        width: 80vw; 
+    }
+    
+}
+.p-map__image{
+    width: 100%;
+    height: 100%;
+    z-index: 90;
+    position: absolute;
+    opacity: 0.6;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    
+    &__cover{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60%;
+        background-color: rgba($color: #000000, $alpha: 0.29);
+        z-index: 99;
+        @include c.responsive(screen02){
+            height: 100%;
+        }
+        @include c.responsive(screen03){
+            width: 61.1%;
+            height: 100%;
+        }
+    }
+
+}
+.p-map__contents{
+    position: relative;
+    z-index: 100;
+    padding: 32px ;
+    @include c.responsive(screen03){
+        padding: 83px 8.6284% 40px 7.625%;
+        width: 61.1%;
+        height: 100%;
+    }
+    & > p{
+       @include c.fontsize(14) ;
+       color: #FFFFFF;
+       line-height: 2.3571 ;
+       margin-top: 40px ;
+       @include c.responsive(screen03){
+           margin-top: 120px;
+           overflow: hidden ;
+       }
+       
+    }
+}
+
+.p-map__title{
+    @include c.fontsize(30) ;
+    font-weight: 500;
+    color: #FFFFFF;
+    position: relative;
+    margin-bottom: 0;
+    line-height: 1.5;
+    &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        margin-top: 10px;
+        background-color: #FFF;
+        width: 75px;
+        height: 2px;
+        @include c.responsive(screen03){
+            margin-top: 55.5px;
+        }
+    }
+}
+

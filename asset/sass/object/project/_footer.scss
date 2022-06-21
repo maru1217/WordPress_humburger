@@ -1,0 +1,51 @@
+@use "../../foundation/common" as c;
+
+.p-footer__img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.p-footer__contents{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    color: #FFFFFF;
+    @include c.fontsize(20) ;
+    font-weight: 300;
+    line-height: 1.45;
+    position: relative;
+    z-index: 2;
+    
+    &--1{
+        margin-right: 20px;
+        position: relative;
+        margin-bottom: 0;    
+        &::after{
+            content: "";
+            display: inline-block;
+            position: absolute;
+            right: -10px;
+            top: 6px;
+            background-color: #FFFFFF;
+            width: 1px;
+            height: 20px;                        
+        }
+    }
+    &--2{
+        margin-bottom: 0;
+    }
+}
+.p-copyright{
+    display: block ;
+    @include c.fontsize(14) ;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 34px 0 30px;
+    position: relative;
+    z-index: 3;
+}

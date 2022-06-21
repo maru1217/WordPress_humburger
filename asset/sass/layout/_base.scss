@@ -1,0 +1,62 @@
+@use "../foundation/common" as c;
+
+html{
+    font-size: 62.5%;
+    min-width: 375px;
+}
+body{
+    line-height:1.7;
+    @include c.fontsize(16) ;
+    font-family:c.$fontG;
+    color: c.$TextBlack;
+    -webkit-text-size-adjust: 100%;
+    height: auto;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    &:hover{
+        text-decoration: none;
+    }
+}
+li{
+    list-style: none;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+}
+button:focus{
+    border: none;
+    outline: none;
+}
+.l-wrapper{
+    padding: 20px 20px 49px;
+    @include c.responsive(screen02){
+        padding: 40px;
+    }
+}
+@include c.responsive(screen03){
+    .l-aside{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    .l-display--pc{
+        display: flex;
+        height: 100%;
+    }
+    .l-display__contents--pc{
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+    
+    }
+}
+
+

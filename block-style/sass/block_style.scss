@@ -1,0 +1,26 @@
+@use "../../asset/sass/foundation/common" as c;
+
+.wp-container-2{
+    display: grid !important;
+    width: 100%;
+    margin-top: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(100% , 1fr));
+    gap: 20px;
+    & figure{
+        width: 100% !important;
+    }
+    @include c.responsive(screen02){
+        grid-template-columns: repeat(auto-fit, minmax(45% , 1fr));
+        column-gap: 2%;
+        row-gap: 20px;
+    }
+    @include c.responsive(screen03){
+        grid-template-columns: repeat(auto-fit, minmax(30% , 1fr));
+        column-gap: 1.5%;
+        row-gap: 20px;
+    }
+    
+}
+h2{
+    font-size: 200px;
+}

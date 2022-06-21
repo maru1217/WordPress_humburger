@@ -1,0 +1,61 @@
+@use "../../foundation/common" as c;
+
+.p-archive{
+    &-mv{
+        background-color: black;
+        position: relative;
+        &__mv{
+            opacity: .4;
+            height: 283px;
+            object-position: 0% 50%;
+            @include c.responsive(screen03){
+                height: 239px;
+                object-position: center center;
+            }
+        }
+
+        &__contents{
+            position: absolute;
+            top: 100px;
+            left: 40px;
+            @include c.responsive(screen02){
+                display: flex ;
+                align-items: center ;
+            }
+        }
+    }
+    &-subheading{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    &-card{
+        margin-top: 20px;
+        @include c.responsive(screen02){
+            display: flex;
+        }
+        &__img{
+            @include c.responsive(screen02){
+                width: 50%;
+                height: auto;
+            }
+        }
+        &__contents{
+            margin-top: -1px;
+            padding: 20px;
+            @include c.responsive(screen02){
+                margin-top: 0;
+                width: 50%;
+                padding: 2% 0% 2% 3% ;
+            }
+        }
+        &__button{
+            display: flex;
+            justify-content: center;
+            margin: 40px 0 30px;
+        }   
+    }
+}
+    
