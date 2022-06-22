@@ -25,6 +25,10 @@
         margin-right: 20px;
         position: relative;
         margin-bottom: 0;    
+        color: #FFFFFF;
+        &:hover{
+            color: aqua;
+        }
         &::after{
             content: "";
             display: inline-block;
@@ -37,7 +41,11 @@
         }
     }
     &--2{
+        color: #FFFFFF;
         margin-bottom: 0;
+        &:hover{
+            color: aqua;
+        }
     }
 }
 .p-copyright{

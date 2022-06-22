@@ -47,4 +47,15 @@ function my_enqueue_script() {
 add_action( 'wp_enqueue_scripts', 'my_enqueue_script' );
 
 
+add_filter('template_include','search_template');
+function search_template($template){
+   if ( is_search() ){
+    $templates[] = "archive-search.php";
+    $templates[] = 'search.php';
+      $template = get_query_template('search',$templates);
+   }
+    return $template;
+}
+
+
 ?>

@@ -1024,6 +1024,10 @@ button:focus {
   margin-right: 20px;
   position: relative;
   margin-bottom: 0;
+  color: #FFFFFF;
+}
+.p-footer__contents--1:hover {
+  color: aqua;
 }
 .p-footer__contents--1::after {
   content: "";
@@ -1036,7 +1040,11 @@ button:focus {
   height: 20px;
 }
 .p-footer__contents--2 {
+  color: #FFFFFF;
   margin-bottom: 0;
+}
+.p-footer__contents--2:hover {
+  color: aqua;
 }
 
 .p-copyright {
@@ -1150,6 +1158,9 @@ button:focus {
   font-size: 2.4rem;
   color: #707070;
   font-weight: 500;
+}
+.p-aside__items__title:hover {
+  color: #707070;
 }
 
 .p-aside__items__ul {
@@ -1268,7 +1279,13 @@ button:focus {
 @media screen and (min-width: 767px) {
   .p-archive-card__img {
     width: 50%;
-    height: auto;
+    height: 380px;
+  }
+}
+@media screen and (min-width: 1078px) {
+  .p-archive-card__img {
+    width: 50%;
+    height: 380px;
   }
 }
 .p-archive-card__contents {

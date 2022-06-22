@@ -12,7 +12,7 @@
 
 
 <div class="p-aside__items--1">
-<p class="p-aside__items__title">バーガー</p>
+<a href="<?php echo esc_url(home_url('/').'archive-burger/')?>" class="p-aside__items__title">バーガー</a>
 <?php
 $menu_name = 'burger-menu';
  if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
@@ -32,7 +32,7 @@ $menu_name = 'burger-menu';
 
 
  <div class="p-aside__items">
-<p class="p-aside__items__title">サイド</p>
+<a href="<?php echo esc_url(home_url('/').'archive-side/')?>" class="p-aside__items__title">サイド</a>
 <?php
 $menu_name = 'side-menu';
  if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
@@ -52,7 +52,7 @@ $menu_name = 'side-menu';
 
 
  <div class="p-aside__items">
-<p class="p-aside__items__title">ドリンク</p>
+<a href="<?php echo esc_url(home_url('/').'archive-drink/')?>" class="p-aside__items__title">ドリンク</a>
 <?php
 $menu_name = 'drink-menu';
  if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {

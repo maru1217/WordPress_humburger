@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Archives
+Template Name: Archives-burger
 */
 get_header(); ?>
                 <main class="l-main">
@@ -9,7 +9,7 @@ get_header(); ?>
                         <img class="c-main-mv__mv--pc p-archive-mv__mv" src="http://hamburger.local/wp-content/uploads/2022/06/menu-bg-pc.jpg">
                         <div class="p-archive-mv__contents">
                             <h2 class="c-main-mv__heading">Menu:</h2>
-                            <p class="c-main-mv__text">チーズバーガー</p>
+                            <p class="c-main-mv__text">バーガー</p>
                         </div>
                     </div>
                     
@@ -28,14 +28,13 @@ get_header(); ?>
                             </p>
                             
                         </section>
-                        <!-- <div class="pagination"> -->
-                        <!-- <div class="list-box">
-                            <ul> -->
+                        
                             <?php
                             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                             $the_query = new WP_Query(array(
                                 'post_status'    => 'publish',
                                 'post_type'      => 'post', // ページの種類（例、page、post、カスタム投稿タイプ名）
+                                'category_name' => 'burger',
                                 'paged'          => $paged,
                                 'posts_per_page' => 3, // 表示件数
                             ));
@@ -48,7 +47,7 @@ get_header(); ?>
                             <div class="p-archive-card">
                                 <img class="c-card__img p-archive-card__img" src="http://hamburger.local/wp-content/uploads/2022/06/cheeseburger-img.jpg">
                                 <div class="c-card__bg p-archive-card__contents">
-                                    <h3 class="c-card__heading01"><?php echo esc_html(get_post_meta($post->ID, 'title', true)); ?></h3>
+                                    <h3 class="c-card__heading01"><?php the_title() ;?></h3>
                                     <h4 class="c-card__heading02"><?php echo esc_html(get_post_meta($post->ID, 'subheading', true)); ?></h4>  
                                     <p class="c-card__text">
                                     <?php echo esc_html(get_post_meta($post->ID, 'text', true)); ?>

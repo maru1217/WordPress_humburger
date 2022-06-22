@@ -39,8 +39,13 @@
         &__img{
             @include c.responsive(screen02){
                 width: 50%;
-                height: auto;
+                height: 380px;
             }
+            @include c.responsive(screen03){
+                width: 50%;
+                height: 380px;
+            }
+
         }
         &__contents{
             margin-top: -1px;
