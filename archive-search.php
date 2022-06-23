@@ -43,7 +43,7 @@ echo  '<p class="c-main-mv__text">検索されたキーワードにマッチす�
                             <?php if (has_post_thumbnail()) : ?>
                                 <img class="c-card__img p-archive-card__img" src="<?php echo esc_url(get_the_post_thumbnail_url()) ?>">
                                 <?php else : ?>
-                                    <img class="c-card__img p-archive-card__img" src="<?php bloginfo('template_url'); ?>/asset/cheeseburger-img.jpg"  alt="デフォルト画像" />
+                                    <img class="c-card__img p-archive-card__img" src="<?php esc_url(get_template_directory_uri()).'/asset/cheeseburger-img.jpg'; ?>"  alt="デフォルト画像" />
                                     <?php endif ; ?>
                                 <div class="c-card__bg p-archive-card__contents">
                                     <h3 class="c-card__heading01"><?php the_title() ;?></h3>

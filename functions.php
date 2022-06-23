@@ -1,6 +1,15 @@
 <?php
 add_theme_support( 'title-tag' );
 add_theme_support('post-thumbnails');
+add_theme_support( 'automatic-feed-links' );
+
+
+
+function wpbeg_theme_setup(){
+  load_theme_textdomain( 'wpbeg', get_template_directory() . '/languages' );
+  }
+add_action( 'after_setup_theme', 'wpbeg_theme_setup' );
+
 function register_my_menus() {
     register_nav_menus( array(
       'burger-menu' => 'バーガー',
@@ -39,7 +48,7 @@ function my_enqueue_script() {
     wp_enqueue_style('my_stylesheet',DIRE.'/asset/css/style.css') ;
     wp_enqueue_style('M PLUS 1p','//fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500;700;800;900&display=swap') ;
     wp_enqueue_style('Roboto','//fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap') ;
-    wp_enqueue_style('fontawesome','//kit.fontawesome.com/a52820ce7d.js') ;
+    wp_enqueue_style( 'font-awesome', '//use.fontawesome.com/releases/v5.6.1/css/all.css', array(), '5.6.1' );
     wp_enqueue_script('jquery','//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js',array(),'3.5.1') ;
     wp_enqueue_script('main js',DIRE.'/asset/js/main.js',array('jquery')) ;
     wp_enqueue_script('inview js',DIRE.'/asset/js/jquery.inview.min.js') ;

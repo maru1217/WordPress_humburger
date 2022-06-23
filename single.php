@@ -10,8 +10,9 @@
         </div>
     </div>
 
-<div class="l-wrapper">
+<div <?php post_class('l-wrapper'); ?> >
 <?php the_content(); ?>
+<?php wp_link_pages(); ?>
 </div>
 <?php endwhile; endif; ?>
 </div> 

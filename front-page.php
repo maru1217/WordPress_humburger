@@ -1,15 +1,15 @@
  <?php get_header(); ?>               
                 <main class="l-main">
                     <div class="p-front-page-mv">
-                        <img class="p-front-page-mv__img" src="<?php echo get_template_directory_uri() ; ?>/asset/images/home_menu.jpg" >
-                        <img class="p-front-page-mv__img--tb" src="<?php echo get_template_directory_uri() ; ?>/asset/images/home_menu_tb.jpg" >
-                        <img class="p-front-page-mv__img--pc"  src="<?php echo get_template_directory_uri() ; ?>/asset/images/home_menu_pc.jpg" >
+                        <img class="p-front-page-mv__img" src="<?php echo esc_url(get_template_directory_uri()) ; ?>/asset/images/home_menu.jpg" >
+                        <img class="p-front-page-mv__img--tb" src="<?php  echo esc_url(get_template_directory_uri()) ; ?>/asset/images/home_menu_tb.jpg" >
+                        <img class="p-front-page-mv__img--pc"  src="<?php echo esc_url(get_template_directory_uri()) ; ?>/asset/images/home_menu_pc.jpg" >
                         <h2 class="p-front-page-mv__text">ダミーサイト</h2>
                     </div>
                     <div class="p-main__contents l-wrapper">
                     <a class="p-main__contents__link" href="<?php $page_url = home_url('/archive/') ;echo esc_html($page_url) ;?>">
                         <div class="p-main__contents--1">
-                            <img class="p-main__contents__img01" src="<?php echo get_template_directory_uri() ; ?>/asset/images/take_out_img.jpg" >
+                            <img class="p-main__contents__img01" src="<?php  echo esc_url(get_template_directory_uri()) ; ?>/asset/images/take_out_img.jpg" >
                             <div class="p-main__contents__wrapper">
                                 <h2 class="p-main__title"><?php $page_id = get_page_by_path('shop') ;
                                                                 $page_id = $page_id -> ID ;
@@ -109,12 +109,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <img class="p-main__contents__img02" src="<?php echo get_template_directory_uri() ; ?>/asset/images/eat_in_img.jpg" >
+                            <img class="p-main__contents__img02" src="<?php echo esc_url(get_template_directory_uri()) ; ?>/asset/images/eat_in_img.jpg" >
                         </div>
                     </a>
                     </div>
                     <section class="p-map"> 
-                        <img src="<?php echo get_template_directory_uri() ; ?>/asset/images/map_img_tb.jpg"  class="p-map__image">
+                        <img src="<?php  echo esc_url(get_template_directory_uri()) ; ?>/asset/images/map_img_tb.jpg"  class="p-map__image">
                         <div class="p-map__image__cover"></div>
                         <div class="p-map__contents">         
                             <h2 class="p-map__title">見出しが入ります</h2>
