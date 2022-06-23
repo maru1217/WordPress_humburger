@@ -44,11 +44,11 @@ $allheight_tb: 1834.8px;
     right: 0;
     background-color: #F2EDE9;
     width: 87.46%;
-    height: 100%;
+    height: auto;
     @include c.responsive(screen02){
         width: 44%;
     }
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     @include c.responsive(screen03){

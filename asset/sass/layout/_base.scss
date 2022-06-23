@@ -59,4 +59,10 @@ button:focus{
     }
 }
 
+@media screen and (max-width: 600px){
+    #wpadminbar{
+        position: fixed;
+    }
+}
+
 

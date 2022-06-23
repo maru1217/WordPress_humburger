@@ -4,11 +4,11 @@ add_theme_support('post-thumbnails');
 add_theme_support( 'automatic-feed-links' );
 
 
-
-function wpbeg_theme_setup(){
+function hamburger_theme_setup(){
   load_theme_textdomain( 'wpbeg', get_template_directory() . '/languages' );
   }
-add_action( 'after_setup_theme', 'wpbeg_theme_setup' );
+add_action( 'after_setup_theme', 'hamburger_theme_setup' );
+
 
 function register_my_menus() {
     register_nav_menus( array(
