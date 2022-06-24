@@ -12,7 +12,10 @@
 
 
 <div class="p-aside__items--1">
-<a href="<?php echo esc_url(home_url('/').'archive-burger/')?>" class="p-aside__items__title">バーガー</a>
+<a href="<?php $page_data = get_page_by_path('archive-burger');
+               $page_id = $page_data->ID;
+               echo esc_url(get_permalink($page_id)) ; ?>" 
+class="p-aside__items__title">バーガー</a>
 <?php
 $menu_name = 'burger-menu';
  if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
@@ -32,7 +35,10 @@ $menu_name = 'burger-menu';
 
 
  <div class="p-aside__items">
-<a href="<?php echo esc_url(home_url('/').'archive-side/')?>" class="p-aside__items__title">サイド</a>
+<a href="<?php $page_data = get_page_by_path('archive-side');
+               $page_id = $page_data->ID;
+               echo esc_url(get_permalink($page_id)) ; ?>"
+                class="p-aside__items__title">サイド</a>
 <?php
 $menu_name = 'side-menu';
  if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
@@ -52,7 +58,10 @@ $menu_name = 'side-menu';
 
 
  <div class="p-aside__items">
-<a href="<?php echo esc_url(home_url('/').'archive-drink/')?>" class="p-aside__items__title">ドリンク</a>
+<a href="<?php $page_data = get_page_by_path('archive-drink');
+               $page_id = $page_data->ID;
+               echo esc_url(get_permalink($page_id)) ; ?>"
+               class="p-aside__items__title">ドリンク</a>
 <?php
 $menu_name = 'drink-menu';
  if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
