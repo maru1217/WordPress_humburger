@@ -7,10 +7,13 @@
                         <h2 class="p-front-page-mv__text">ダミーサイト</h2>
                     </div>
                     <div class="p-main__contents l-wrapper">
-                    <a class="p-main__contents__link" href="<?php 
-                                                            $page_data = get_page_by_path('archive-burger') ; 
-                                                            $page_id = $page_data->ID;
-                                                            echo esc_url(get_permalink($page_id)) ;?>">
+                    <?php if(home_url('/').'archive-burger/' ):?>
+                    <a class="p-main__contents__link" href="<?php  echo esc_url(home_url('/').'archive-burger/') ; ?>">
+                    <?php else :?>
+                    <p>archive-burger.phpがありませんので、作成してください</p>
+                    <a class="p-main__contents__link" href="">
+                    <?php endif ;?>
+
                         <div class="p-main__contents--1">
                             <img class="p-main__contents__img01" src="<?php  echo esc_url(get_template_directory_uri()) ; ?>/asset/images/take_out_img.jpg" >
                             <div class="p-main__contents__wrapper">
@@ -62,10 +65,12 @@
                             </div> 
                         </div>
                     </a>
-                    <a class="p-main__contents__link" href="<?php 
-                                                            $page_data = get_page_by_path('archive-burger') ; 
-                                                            $page_id = $page_data->ID;
-                                                            echo esc_url(get_permalink($page_id)) ;?>">
+                    <?php if(home_url('/').'archive-burger/' ):?>
+                    <a class="p-main__contents__link" href="<?php  echo esc_url(home_url('/').'archive-burger/') ; ?>">
+                    <?php else :?>
+                    <p>archive-burger.phpがありませんので、作成してください</p>
+                    <a class="p-main__contents__link" href="">
+                    <?php endif ;?>
                         <div class="p-main__contents--2">
                             <div class="p-main__contents__wrapper">
                                 <h2 class="p-main__title -eatin">
