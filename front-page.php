@@ -7,56 +7,61 @@
                         <h2 class="p-front-page-mv__text">ダミーサイト</h2>
                     </div>
                     <div class="p-main__contents l-wrapper">
-                    <?php if(home_url('/').'archive-burger/' ):?>
+                    <?php if((home_url('/').'archive-burger/') ):?>
                     <a class="p-main__contents__link" href="<?php  echo esc_url(home_url('/').'archive-burger/') ; ?>">
                     <?php else :?>
-                    <p>archive-burger.phpがありませんので、作成してください</p>
-                    <a class="p-main__contents__link" href="">
+                    <p style="position:fixed; top:30px;left:0;z-index:99999;">エラー：archive-burger.phpがありませんので、作成してください</p>
+                    <a class="p-main__contents__link" >
                     <?php endif ;?>
 
                         <div class="p-main__contents--1">
                             <img class="p-main__contents__img01" src="<?php  echo esc_url(get_template_directory_uri()) ; ?>/asset/images/take_out_img.jpg" >
                             <div class="p-main__contents__wrapper">
-                                <h2 class="p-main__title"><?php $page_id = get_page_by_path('shop') ;
-                                                                $page_id = $page_id -> ID ;
-                                                                if(get_post_meta($page_id,'take_out',true)):
+                                <h2 class="p-main__title"><?php if( get_page_by_path('archive-burger')):
+                                                                $page_id = get_page_by_path('archive-burger') ;
+                                                                $page_id = $page_id -> ID ;                                                            
                                                                 echo esc_html(get_post_meta($page_id,'take_out',true)) ;
+                                                                else :echo 'archive-burgerというslugが見つかりません';
                                                                 endif ;
                                                                  ?>
                                 </h2>
                                 <div class="p-main__items">
                                     <div class="p-main__items__wrapper">
                                         <p class="p-main__items__title">
-                                            <?php $page_id = get_page_by_path('shop') ;
-                                            $page_id = $page_id -> ID ;
-                                            if(get_post_meta($page_id,'take_out',true)):
+                                            <?php if(get_page_by_path('shop') ) : 
+                                            $page_id = get_page_by_path('shop') ;
+                                            $page_id = $page_id -> ID ;                                        
                                             echo esc_html(get_post_meta($page_id,'take_out',true)) ;
+                                            else : echo 'shopというslugが見つかりません'; 
                                             endif ;
                                             ?>
                                         </p>
                                         <p class="p-main__items__description">
-                                            <?php $page_id = get_page_by_path('shop') ;
-                                            $page_id = $page_id -> ID ;
-                                            if(get_post_meta($page_id,'take_out_description01',true)):
+                                            <?php if(get_page_by_path('shop') ) :
+                                            $page_id = get_page_by_path('shop') ;
+                                            $page_id = $page_id -> ID ;                                            
                                             echo esc_html(get_post_meta($page_id,'take_out_description01',true)) ;
+                                            else : echo 'shopというslugが見つかりません'; 
                                             endif ;
                                             ?>
                                         </p>
                                     </div>
                                     <div class="p-main__items__wrapper">
                                         <p class="p-main__items__title">
-                                        <?php $page_id = get_page_by_path('shop') ;
-                                        $page_id = $page_id -> ID ;
-                                        if(get_post_meta($page_id,'take_out',true)):
+                                        <?php if(get_page_by_path('shop')):
+                                        $page_id = get_page_by_path('shop') ;
+                                        $page_id = $page_id -> ID ;                                        
                                         echo esc_html(get_post_meta($page_id,'take_out',true)) ;
+                                        else : echo 'shopというslugが見つかりません'; 
                                         endif ;
                                         ?>
                                         </p>
                                         <p class="p-main__items__description">
-                                        <?php $page_id = get_page_by_path('shop') ;
-                                        $page_id = $page_id -> ID ;
-                                        if(get_post_meta($page_id,'take_out_description02',true)):
+                                        <?php if(get_page_by_path('shop')) :
+                                        $page_id = get_page_by_path('shop') ;
+                                        $page_id = $page_id -> ID ;                                        
                                         echo esc_html(get_post_meta($page_id,'take_out_description02',true)) ;
+                                        else : echo 'shopというslugが見つかりません'; 
                                         endif ;
                                         ?>
                                         </p>
@@ -65,11 +70,11 @@
                             </div> 
                         </div>
                     </a>
-                    <?php if(home_url('/').'archive-burger/' ):?>
+                    <?php if((home_url('/').'archive-burger/')):?>
                     <a class="p-main__contents__link" href="<?php  echo esc_url(home_url('/').'archive-burger/') ; ?>">
                     <?php else :?>
-                    <p>archive-burger.phpがありませんので、作成してください</p>
-                    <a class="p-main__contents__link" href="">
+                    <p style="position:fixed; top:30px;left:0;z-index:99999;">エラー：archive-burger.phpがありませんので、作成してください</p>   
+                    <a>
                     <?php endif ;?>
                         <div class="p-main__contents--2">
                             <div class="p-main__contents__wrapper">
@@ -78,42 +83,59 @@
                                 $page_id = $page_id -> ID ;
                                 if(get_post_meta($page_id,'eat_in',true)):
                                 echo esc_html(get_post_meta($page_id,'eat_in',true)) ;
+                                else :echo 'slugがshopという名前の固定ページにカスタムフィールドeat_inがありません' ;
                                 endif ;
                                     ?>
                                 </h2>
                                 <div class="p-main__items">
                                     <div class="p-main__items__wrapper">
                                         <p class="p-main__items__title">
-                                        <?php $page_id = get_page_by_path('shop') ;
-                                        $page_id = $page_id -> ID ;
-                                        if(get_post_meta($page_id,'eat_in',true)):
+                                        <?php if( get_page_by_path('shop')) :
+                                        $page_id = get_page_by_path('shop') ;
+                                        $page_id = $page_id -> ID ;    
+                                        if( get_post_meta($page_id,'eat_in',true)):
                                         echo esc_html(get_post_meta($page_id,'eat_in',true)) ;
+                                        else : echo 'エラー;slugがshopという名前の固定ページにカスタムフィールドeat_inがありません' ;
+                                        endif ;
+                                        else : echo 'エラー： slug "shop"がありません' ;
                                         endif ;
                                             ?>   
                                         </p>
                                         <p class="p-main__items__description">
-                                        <?php $page_id = get_page_by_path('shop') ;
+                                        <?php if( get_page_by_path('shop')):
+                                        $page_id = get_page_by_path('shop') ;
                                         $page_id = $page_id -> ID ;
                                         if(get_post_meta($page_id,'eat_in_description01',true)):
                                         echo get_post_meta($page_id,'eat_in_description01',true) ;
+                                        else : echo'slugがshopという名前の固定ページにカスタムフィールドeat_in_description01がありません' ;
+                                        endif ;
+                                        else : echo 'エラー： slug "shop"がありません' ;
                                         endif ;
                                         ?>
                                         </p>
                                     </div>
                                     <div class="p-main__items__wrapper">
                                         <p class="p-main__items__title">
-                                        <?php $page_id = get_page_by_path('shop') ;
+                                        <?php if(get_page_by_path('shop') ) :
+                                        $page_id = get_page_by_path('shop') ;
                                         $page_id = $page_id -> ID ;
-                                        if(get_post_meta($page_id,'eat_in',true)):
+                                        if( get_post_meta($page_id,'eat_in',true)):
                                         echo get_post_meta($page_id,'eat_in',true) ;
+                                        else :echo'slugがshopという名前の固定ページにカスタムフィールドeat_inがありません' ;
+                                        endif ;
+                                        else : echo 'エラー： slug "shop"がありません' ;
                                         endif ;
                                             ?>   
                                         </p>
                                         <p class="p-main__items__description">
-                                        <?php $page_id = get_page_by_path('shop') ;
+                                        <?php if(get_page_by_path('shop')) :
+                                        $page_id = get_page_by_path('shop') ;
                                         $page_id = $page_id -> ID ;
                                         if(get_post_meta($page_id,'eat_in_description02',true)):
                                         echo get_post_meta($page_id,'eat_in_description02',true) ;
+                                        else :echo'slugがshopという名前の固定ページにカスタムフィールドeat_in_descriptionがありません' ;
+                                        endif ;
+                                        else : echo 'エラー： slug "shop"がありません' ;
                                         endif ;
                                         ?>
                                         </p>
