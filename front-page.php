@@ -79,11 +79,14 @@
                         <div class="p-main__contents--2">
                             <div class="p-main__contents__wrapper">
                                 <h2 class="p-main__title -eatin">
-                                <?php $page_id = get_page_by_path('shop') ;
+                                <?php if( get_page_by_path('shop')) :
+                                $page_id = get_page_by_path('shop') ;
                                 $page_id = $page_id -> ID ;
-                                if(get_post_meta($page_id,'eat_in',true)):
+                                if( get_post_meta($page_id,'eat_in',true)):
                                 echo esc_html(get_post_meta($page_id,'eat_in',true)) ;
                                 else :echo 'slugがshopという名前の固定ページにカスタムフィールドeat_inがありません' ;
+                                endif ;
+                                else : echo 'エラー： slug "shop"がありません' ;
                                 endif ;
                                     ?>
                                 </h2>
