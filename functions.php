@@ -3,13 +3,13 @@ add_theme_support( 'title-tag' );
 add_theme_support('post-thumbnails');
 add_theme_support( 'automatic-feed-links' );
 
-function redirect_404() {
-  //メインページ・シングルページ・アーカイブ（月別）・固定ページ 以外の指定の場合 404 ページを表示する
-  if(is_home() || is_single() || is_month() || is_page()) return;
-  include(TEMPLATEPATH . '/404.php');
-  exit;
-}
-add_action('template_redirect', 'redirect_404');
+// function redirect_404() {
+//   //メインページ・シングルページ・アーカイブ（月別）・固定ページ 以外の指定の場合 404 ページを表示する
+//   if(is_home() || is_single() || is_month() || is_page()) return;
+//   include(TEMPLATEPATH . '/404.php');
+//   exit;
+// }
+// add_action('template_redirect', 'redirect_404');
 
 
 function hamburger_theme_setup(){

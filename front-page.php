@@ -8,9 +8,11 @@
                     </div>
                     <div class="p-main__contents l-wrapper">
                     <?php if((home_url('/').'archive-burger/') ):?>
-                    <a class="p-main__contents__link" href="<?php  echo esc_url(home_url('/').'archive-burger/') ; ?>">
+                    <a class="p-main__contents__link" href="<?php $page_data = get_page_by_path('archive-burger');
+                                                                $page_id = $page_data->ID;
+                                                                echo esc_url(get_permalink($page_id)) ; ?>">
                     <?php else :?>
-                    <p style="position:fixed; top:30px;left:0;z-index:99999;">エラー：archive-burger.phpがありませんので、作成してください</p>
+                    <p style="position:fixed; top:30px;left:0;z-index:99999;">エラー：archive-burgerというslugをもつページがありません。</p>
                     <a class="p-main__contents__link" >
                     <?php endif ;?>
 
@@ -71,9 +73,11 @@
                         </div>
                     </a>
                     <?php if((home_url('/').'archive-burger/')):?>
-                    <a class="p-main__contents__link" href="<?php  echo esc_url(home_url('/').'archive-burger/') ; ?>">
+                    <a class="p-main__contents__link" href="<?php $page_data = get_page_by_path('archive-burger');
+                                                                $page_id = $page_data->ID;
+                                                                echo esc_url(get_permalink($page_id)) ; ?>">
                     <?php else :?>
-                    <p style="position:fixed; top:30px;left:0;z-index:99999;">エラー：archive-burger.phpがありませんので、作成してください</p>   
+                    <p style="position:fixed; top:30px;left:0;z-index:99999;">エラー：archive-burgerというslugをもつページがありません。</p>   
                     <a>
                     <?php endif ;?>
                         <div class="p-main__contents--2">
