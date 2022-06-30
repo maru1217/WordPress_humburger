@@ -7,7 +7,7 @@
                         <h2 class="p-front-page-mv__text">ダミーサイト</h2>
                     </div>
                     <div class="p-main__contents l-wrapper">
-                    <?php if((home_url('/').'archive-burger/') ):?>
+                    <?php if(get_page_by_path('archive-burger') ):?>
                     <a class="p-main__contents__link" href="<?php $page_data = get_page_by_path('archive-burger');
                                                                 $page_id = $page_data->ID;
                                                                 echo esc_url(get_permalink($page_id)) ; ?>">
@@ -72,7 +72,7 @@
                             </div> 
                         </div>
                     </a>
-                    <?php if((home_url('/').'archive-burger/')):?>
+                    <?php if(get_page_by_path('archive-burger')):?>
                     <a class="p-main__contents__link" href="<?php $page_data = get_page_by_path('archive-burger');
                                                                 $page_id = $page_data->ID;
                                                                 echo esc_url(get_permalink($page_id)) ; ?>">
