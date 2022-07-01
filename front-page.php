@@ -13,7 +13,7 @@
                                                                 echo esc_url(get_permalink($page_id)) ; ?>">
                     <?php else :?>
                     <p style="position:fixed; top:30px;left:0;z-index:99999;">エラー：archive-burgerというslugをもつページがありません。</p>
-                    <a class="p-main__contents__link" >
+                    <a class="p-main__contents__link">
                     <?php endif ;?>
 
                         <div class="p-main__contents--1">
@@ -78,7 +78,7 @@
                                                                 echo esc_url(get_permalink($page_id)) ; ?>">
                     <?php else :?>
                     <p style="position:fixed; top:30px;left:0;z-index:99999;">エラー：archive-burgerというslugをもつページがありません。</p>   
-                    <a>
+                    <a class="p-main__contents__link">
                     <?php endif ;?>
                         <div class="p-main__contents--2">
                             <div class="p-main__contents__wrapper">
